@@ -91,15 +91,15 @@ const Contact = () => {
             className="space-y-6"
           >
             <div className="card-surface p-6 space-y-4">
-              <a href="mailto:cleophas@example.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:ouma.cleo@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={18} className="text-primary" />
-                cleophas@example.com
+                ouma.cleo@gmail.com
               </a>
-              <a href="tel:+254700000000" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+254720671479" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone size={18} className="text-primary" />
-                +254 700 000 000
+                +254 720 671 479
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/cleophas-tech/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={18} className="text-primary" />
                 LinkedIn Profile
               </a>
