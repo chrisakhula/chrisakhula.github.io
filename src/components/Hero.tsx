@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
+import headshot from "@/assets/headshot.jpeg";
 
 const stats = [
   { value: "8+", label: "Years Experience" },
