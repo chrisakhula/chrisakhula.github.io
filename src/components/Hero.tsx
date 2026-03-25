@@ -78,9 +78,11 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-full border-2 border-primary/20" />
               <div className="absolute inset-4 rounded-full border border-primary/10" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full bg-secondary flex items-center justify-center">
-                  <span className="font-display text-5xl font-bold text-primary">CO</span>
-                </div>
+                <img
+                  src={headshot}
+                  alt="Cleophas Ouma"
+                  className="w-48 h-48 rounded-full object-cover object-top border-2 border-primary/30"
+                />
               </div>
               {/* Decorative dots */}
               <div className="absolute top-0 right-8 w-3 h-3 rounded-full bg-primary/60" />
