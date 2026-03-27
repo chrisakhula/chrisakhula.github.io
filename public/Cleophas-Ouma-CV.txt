@@ -1,0 +1,112 @@
+CLEOPHAS OUMA
+Group ICT Manager | ERP Functional Consultant | Tech Enthusiast
+
+PROFILE
+I design and manage enterprise systems that improve operations, strengthen reporting, and support real business growth across hospitality, retail, and manufacturing.
+
+CORE IMPACT
+- 5+ years in ICT and ERP systems
+- 100+ users managed across enterprise systems
+- 30% improvement in system security and efficiency
+- 20% reduction in incidents
+- 15% reduction in downtime
+
+VALUE STATEMENT
+I do not just manage systems.
+I align technology with operations, so businesses run better, faster, and with fewer errors.
+
+ABOUT
+I am a Group ICT Manager and ERP Functional Consultant with hands-on experience across hospitality, retail, and food processing environments.
+
+I specialize in translating business operations into structured digital workflows, improving inventory control, reporting accuracy, and operational visibility.
+
+WHAT I DO
+- Design ERP workflows for real business processes
+- Improve inventory tracking and reporting accuracy
+- Align ICT systems with finance and operations
+- Support teams through training and system adoption
+- Strengthen infrastructure and system reliability
+
+HOW I THINK
+- Business first, system second
+- Fix workflows, not just tools
+- Measure impact, not activity
+- Keep systems simple and reliable
+
+FEATURED CASE STUDIES
+1. ERP Central Store Implementation | Bradegate Food Industries
+- Centralized ERP workflow for all finished goods
+- Structured movement: Production -> Central Store -> Distribution
+- Integrated warehouse, retail, and production inventory
+- SOPs for standardized stock handling
+- Result: full control over stock movement, cleaner reports, better coordination, stronger foundation for scale
+
+2. POS and Inventory Integration | Bantu Africa Resort and Bradegate Pizza
+- Linked POS transactions to inventory movement
+- Improved reporting workflows
+- Standardized daily sales reconciliation
+- Trained staff on system usage
+- Result: clearer sales-to-stock alignment, faster decision-making, reduced reporting errors
+
+3. ICT Infrastructure and System Optimization | Bantu Africa Resort
+- Strengthened security monitoring
+- Improved access control
+- Optimized infrastructure
+- Trained users
+- Result: more stable systems, better security, improved user accountability
+
+PROJECTS
+- Bantu Africa Resort ICT Systems
+- Bradegate Food Industries ERP Systems
+- POS and Retail Systems
+- Web Development Projects
+
+EXPERIENCE
+Group ICT Manager
+Bantu Africa Resort Ltd & Bradegate Food Industries
+Jan 2025 - Present
+- Lead ERP and ICT operations across multiple units
+- Align systems with finance, inventory, and reporting
+- Drive operational efficiency through digital workflows
+
+ICT Officer
+Bantu Africa Resort Ltd
+- Managed ICT infrastructure and systems
+- Improved security and operational workflows
+- Supported POS and reporting systems
+
+ICT Intern
+State Department of Trade (KIBT)
+- Supported network and system maintenance
+- Assisted in security testing and monitoring
+
+SKILLS
+Core
+- ERP Implementation and Optimization
+- Business Process Mapping
+- Inventory and Warehouse Systems
+- POS Systems
+- ICT Infrastructure
+- Cybersecurity Monitoring
+
+Development
+- PHP (Learning)
+- Django
+- React
+- HTML, CSS
+
+Professional
+- Leadership
+- System Thinking
+- Process Improvement
+- Training and Support
+
+CURRENTLY LEARNING
+I am currently focused on backend development using PHP.
+The goal is simple: build real tools, improve my development workflow, and document the journey through practical projects.
+
+CONTACT
+Email: ouma.cleo@gmail.com
+Phone: 0720671479
+LinkedIn: https://www.linkedin.com/in/cleophas-tech/
+GitHub: https://github.com/chrisakhula
