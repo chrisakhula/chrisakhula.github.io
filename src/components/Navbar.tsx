@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import cleodev from "@/assets/cleodev.png";
+import portraitArt from "@/assets/dev-cleophas01.jpg";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -21,20 +21,18 @@ const Navbar = () => {
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="section-container flex h-16 items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-primary/20 bg-white/95 p-1.5 shadow-lg shadow-black/20">
+          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-primary/20 bg-white/95 p-1 shadow-lg shadow-black/20">
             <img
-              src={cleodev}
-              alt="Cleodev mark"
-              className="h-full w-full rounded-xl object-contain"
+              src={portraitArt}
+              alt="Original portrait of Cleophas Ouma"
+              className="h-full w-full rounded-full object-cover"
             />
           </span>
           <div className="hidden sm:block">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
               Cleophas Ouma
             </p>
-            <p className="text-xs text-muted-foreground">
-              ERP and ICT Systems | Cleodev Identity
-            </p>
+            <p className="text-xs text-muted-foreground">ERP and ICT Systems</p>
           </div>
         </a>
 
