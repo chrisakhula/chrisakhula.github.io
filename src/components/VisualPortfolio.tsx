@@ -8,6 +8,7 @@ type VisualItem = {
   description: string;
   className: string;
   tag: string;
+  kind?: "erp-dashboard" | "pos-analytics";
   image?: string;
 };
 
@@ -30,15 +31,19 @@ const visualItems: VisualItem[] = [
   },
   {
     title: "ERP Dashboard",
-    description: "Placeholder for stock, movement, and reporting views.",
+    description:
+      "A live ERP sales workspace translated into a portfolio-friendly dashboard preview.",
     className: "lg:col-span-2",
-    tag: "Placeholder",
+    tag: "Live System",
+    kind: "erp-dashboard",
   },
   {
     title: "POS Analytics Screen",
-    description: "Placeholder for daily sales and reconciliation insights.",
+    description:
+      "A reporting workspace based on your POS analytics module, showing the sales and cashup views behind daily reconciliation.",
     className: "",
-    tag: "Placeholder",
+    tag: "Live System",
+    kind: "pos-analytics",
   },
   {
     title: "Inventory System Panel",
@@ -63,6 +68,164 @@ const visualItems: VisualItem[] = [
 const VisualPortfolio = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const renderPreview = (item: VisualItem) => {
+    if (item.kind === "erp-dashboard") {
+      const quickActions = [
+        "SmartPOS",
+        "Cash Sales",
+        "Credit Sales",
+        "Sales Returns",
+        "Deliveries",
+        "Sales Orders",
+      ];
+      const railItems = ["Sales", "Stock", "Production", "Finance", "Reports"];
+
+      return (
+        <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-3">
+          <div className="overflow-hidden rounded-[1.15rem] border border-primary/15 bg-[#eef2f5] shadow-inner shadow-black/5">
+            <div className="flex items-center justify-between bg-[#005f8f] px-4 py-3 text-[11px] uppercase tracking-[0.22em] text-white/90">
+              <span>ERP Dashboard</span>
+              <span className="rounded-full bg-white/10 px-2 py-1 text-[10px] tracking-[0.18em]">
+                Sales Module
+              </span>
+            </div>
+            <div className="grid gap-3 p-3 md:grid-cols-[140px_1fr]">
+              <div className="space-y-2">
+                {railItems.map((railItem) => (
+                  <div
+                    key={railItem}
+                    className="rounded-xl border border-[#c1cad3] bg-white px-3 py-2 text-xs font-medium text-slate-700 shadow-sm shadow-black/5"
+                  >
+                    {railItem}
+                  </div>
+                ))}
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                {quickActions.map((action) => (
+                  <div
+                    key={action}
+                    className="min-h-[112px] rounded-2xl border border-[#c1cad3] bg-white p-4 shadow-sm shadow-black/5"
+                  >
+                    <div className="h-10 w-10 rounded-2xl bg-[#d8ebf3]" />
+                    <p className="mt-8 text-sm font-medium text-slate-700">
+                      {action}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (item.kind === "pos-analytics") {
+      const analyticsCards = [
+        "Stock Analytics",
+        "Sales Analytics",
+        "Purchases Analytics",
+        "Accounts Analytics",
+        "Annual Analytics",
+        "Transactions Dashboard",
+        "Cashup Dashboard",
+        "Lost Sales Analytics",
+      ];
+
+      return (
+        <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-3">
+          <div className="overflow-hidden rounded-[1.15rem] border border-primary/15 bg-[#eef2f5] shadow-inner shadow-black/5">
+            <div className="flex items-center justify-between bg-[#005f8f] px-4 py-3 text-[11px] uppercase tracking-[0.22em] text-white/90">
+              <span>POS Analytics</span>
+              <span className="rounded-full bg-white/10 px-2 py-1 text-[10px] tracking-[0.18em]">
+                BI Analytics
+              </span>
+            </div>
+            <div className="grid gap-3 p-3 xl:grid-cols-[108px_1fr]">
+              <div className="space-y-2">
+                {["Sales", "Stock", "Finance", "Reports"].map((railItem) => (
+                  <div
+                    key={railItem}
+                    className="rounded-xl border border-[#c1cad3] bg-white px-3 py-2 text-[11px] font-medium text-slate-700 shadow-sm shadow-black/5"
+                  >
+                    {railItem}
+                  </div>
+                ))}
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {analyticsCards.map((card) => (
+                  <div
+                    key={card}
+                    className={`rounded-2xl border p-4 shadow-sm shadow-black/5 ${
+                      card === "Cashup Dashboard"
+                        ? "border-[#00a5ec] bg-white ring-1 ring-[#00a5ec]/25"
+                        : "border-[#c1cad3] bg-white"
+                    }`}
+                  >
+                    <div
+                      className={`h-9 w-9 rounded-2xl ${
+                        card === "Sales Analytics"
+                          ? "bg-[#efe3ff]"
+                          : card === "Transactions Dashboard"
+                            ? "bg-[#dcecff]"
+                            : card === "Cashup Dashboard"
+                              ? "bg-[#eeeeee]"
+                              : "bg-[#e8edf1]"
+                      }`}
+                    />
+                    <p className="mt-6 text-xs font-medium leading-relaxed text-slate-700">
+                      {card}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (item.image) {
+      return (
+        <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-3">
+          <div className="overflow-hidden rounded-[1.15rem] bg-white/95">
+            <img
+              src={item.image}
+              alt={item.title}
+              className={`w-full ${
+                item.title === "Cleodev Brand Mark"
+                  ? "h-52 object-contain p-8"
+                  : "h-52 object-cover"
+              }`}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-5">
+        <div className="flex gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-primary/80" />
+          <span className="h-2.5 w-2.5 rounded-full bg-primary/35" />
+          <span className="h-2.5 w-2.5 rounded-full bg-primary/20" />
+        </div>
+        <div className="mt-5 grid grid-cols-4 gap-2">
+          <div className="col-span-1 h-28 rounded-2xl bg-background/70" />
+          <div className="col-span-3 space-y-2">
+            <div className="h-8 rounded-2xl bg-primary/10" />
+            <div className="h-8 rounded-2xl bg-background/70" />
+            <div className="h-8 rounded-2xl bg-background/55" />
+          </div>
+        </div>
+        <div className="mt-5 space-y-2">
+          <div className="h-2 rounded-full bg-border" />
+          <div className="h-2 w-4/5 rounded-full bg-border" />
+          <div className="h-2 w-3/5 rounded-full bg-border" />
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section id="visual-portfolio" className="py-24">
@@ -99,42 +262,7 @@ const VisualPortfolio = () => {
                   Gallery
                 </span>
               </div>
-              {item.image ? (
-                <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-3">
-                  <div className="overflow-hidden rounded-[1.15rem] bg-white/95">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className={`w-full ${
-                        item.title === "Cleodev Brand Mark"
-                          ? "h-52 object-contain p-8"
-                          : "h-52 object-cover"
-                      }`}
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-5">
-                  <div className="flex gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-primary/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-primary/35" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-primary/20" />
-                  </div>
-                  <div className="mt-5 grid grid-cols-4 gap-2">
-                    <div className="col-span-1 h-28 rounded-2xl bg-background/70" />
-                    <div className="col-span-3 space-y-2">
-                      <div className="h-8 rounded-2xl bg-primary/10" />
-                      <div className="h-8 rounded-2xl bg-background/70" />
-                      <div className="h-8 rounded-2xl bg-background/55" />
-                    </div>
-                  </div>
-                  <div className="mt-5 space-y-2">
-                    <div className="h-2 rounded-full bg-border" />
-                    <div className="h-2 w-4/5 rounded-full bg-border" />
-                    <div className="h-2 w-3/5 rounded-full bg-border" />
-                  </div>
-                </div>
-              )}
+              {renderPreview(item)}
               <h3 className="mt-6 font-display text-2xl font-semibold">
                 {item.title}
               </h3>
