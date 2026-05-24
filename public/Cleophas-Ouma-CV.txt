@@ -1,109 +1,138 @@
 CLEOPHAS OUMA
-Group ICT Manager | ERP Functional Consultant | Tech Enthusiast
+Group ICT Manager | ERP Functional Consultant | Web & Digital Systems Builder
 
 PROFILE
-I design and manage enterprise systems that improve operations, strengthen reporting, and support real business growth across hospitality, retail, and manufacturing.
+I help businesses turn messy operations into clear, reliable, and measurable digital systems.
 
-CORE IMPACT
-- 5+ years in ICT and ERP systems
-- 100+ users managed across enterprise systems
-- 30% improvement in system security and efficiency
-- 20% reduction in incidents
-- 15% reduction in downtime
+I work across ICT infrastructure, ERP workflows, POS systems, inventory control, web development, cybersecurity monitoring, digital reporting, and brand visibility. My focus is simple: build systems that help teams work better, reduce errors, improve decision-making, and support business growth.
+
+Currently, I serve as Group ICT Manager at Bantu Africa Resort Ltd and Bradegate Food Industries Ltd, overseeing ICT operations across hospitality, food processing, retail, and fast-food environments.
 
 VALUE STATEMENT
-I do not just manage systems.
-I align technology with operations, so businesses run better, faster, and with fewer errors.
+I do not just manage technology.
+I connect systems with real business operations, from production, stock movement, sales, finance, reporting, customer experience, websites, and digital marketing.
 
-ABOUT
-I am a Group ICT Manager and ERP Functional Consultant with hands-on experience across hospitality, retail, and food processing environments.
-
-I specialize in translating business operations into structured digital workflows, improving inventory control, reporting accuracy, and operational visibility.
+CORE IMPACT
+- 5+ years working in ICT, ERP, and business systems
+- 100+ users supported across enterprise systems
+- 30% improvement in system security and operational efficiency
+- 20% reduction in ICT-related incidents through training and controls
+- 15% reduction in downtime through maintenance and infrastructure support
 
 WHAT I DO
-- Design ERP workflows for real business processes
-- Improve inventory tracking and reporting accuracy
-- Align ICT systems with finance and operations
-- Support teams through training and system adoption
-- Strengthen infrastructure and system reliability
-
-HOW I THINK
-- Business first, system second
-- Fix workflows, not just tools
-- Measure impact, not activity
-- Keep systems simple and reliable
+- Design and improve ERP workflows for real business operations
+- Align inventory, production, sales, finance, and reporting systems
+- Manage POS systems for hospitality, retail, and fast-food operations
+- Strengthen ICT infrastructure, networks, CCTV, backups, and access control
+- Support KRA TIMS/eTIMS readiness and sales reporting accuracy
+- Build and improve websites using modern tools and practical workflows
+- Create digital marketing systems for hospitality, food brands, and service businesses
+- Train teams, document processes, and improve system adoption
 
 FEATURED CASE STUDIES
-1. ERP Central Store Implementation | Bradegate Food Industries
-- Centralized ERP workflow for all finished goods
-- Structured movement: Production -> Central Store -> Distribution
-- Integrated warehouse, retail, and production inventory
-- SOPs for standardized stock handling
-- Result: full control over stock movement, cleaner reports, better coordination, stronger foundation for scale
+1. ERP Central Store Workflow | Bradegate Food Industries
+- Helped define ERP inventory movement workflows
+- Supported central store control for finished goods
+- Improved coordination between production, stores, distribution, and accounts
+- Worked on SOP structures for stock receiving, issuing, returns, and reporting
+- Result: better stock movement control, improved reporting structure, and stronger foundation for scaling food production and distribution operations
 
 2. POS and Inventory Integration | Bantu Africa Resort and Bradegate Pizza
-- Linked POS transactions to inventory movement
-- Improved reporting workflows
-- Standardized daily sales reconciliation
-- Trained staff on system usage
-- Result: clearer sales-to-stock alignment, faster decision-making, reduced reporting errors
+- Supported POS operations across hospitality and fast-food environments
+- Improved daily sales reconciliation workflows
+- Linked sales activity with inventory tracking
+- Trained staff on system use and reporting discipline
+- Result: clearer sales-to-stock alignment, faster decision-making, and improved operational accountability
 
-3. ICT Infrastructure and System Optimization | Bantu Africa Resort
-- Strengthened security monitoring
-- Improved access control
-- Optimized infrastructure
-- Trained users
-- Result: more stable systems, better security, improved user accountability
+3. ICT Infrastructure Optimization | Bantu Africa Resort
+- Managed ICT infrastructure and user support
+- Strengthened system access control and monitoring
+- Supported CCTV, network reliability, and troubleshooting
+- Improved user awareness on ICT security and system use
+- Result: more stable ICT operations, improved user accountability, and better support for daily resort operations
 
-PROJECTS
-- Bantu Africa Resort ICT Systems
-- Bradegate Food Industries ERP Systems
-- POS and Retail Systems
-- Web Development Projects
+4. Website and Digital Presence Development
+- Planned website and content structures for hospitality and service brands
+- Built portfolio workflows using GitHub, React/Next.js, and cPanel deployment
+- Structured SEO-focused service pages
+- Wrote website copy for Bantu Africa Resort, ARS, and other service organizations
+- Developed the chrisakhula brand around websites, branding, poster design, SEO, and digital marketing
+- Result: better online visibility, stronger brand presentation, and practical digital platforms that support marketing and customer engagement
 
 EXPERIENCE
 Group ICT Manager
-Bantu Africa Resort Ltd & Bradegate Food Industries
-Jan 2025 - Present
-- Lead ERP and ICT operations across multiple units
-- Align systems with finance, inventory, and reporting
-- Drive operational efficiency through digital workflows
+Bantu Africa Resort Ltd & Bradegate Food Industries Ltd
+January 2025 - Present
+- Lead ICT and ERP operations across hospitality, food processing, retail, and fast-food units
+- Align systems with finance, inventory, sales, production, and reporting needs
+- Support ERP workflows, POS systems, ICT infrastructure, and digital reporting
+- Improve operational efficiency through structured systems and process documentation
+- Coordinate ICT support, system adoption, access control, and user training
 
 ICT Officer
 Bantu Africa Resort Ltd
-- Managed ICT infrastructure and systems
-- Improved security and operational workflows
-- Supported POS and reporting systems
+- Managed ICT infrastructure, systems, users, and support requests
+- Supported POS, reporting, network, and security systems
+- Improved access control, monitoring, and ICT service reliability
+- Assisted teams in using systems more effectively
 
 ICT Intern
-State Department of Trade (KIBT)
-- Supported network and system maintenance
+State Department of Trade, KIBT
+- Supported system maintenance and network operations
 - Assisted in security testing and monitoring
+- Contributed to improved system stability and operational support
 
 SKILLS
-Core
+ICT and Systems
 - ERP Implementation and Optimization
-- Business Process Mapping
+- POS Systems Management
 - Inventory and Warehouse Systems
-- POS Systems
-- ICT Infrastructure
-- Cybersecurity Monitoring
+- Business Process Mapping
+- ICT Infrastructure Management
+- CCTV and Security Monitoring
+- Access Control and User Management
+- Backup and Disaster Recovery Planning
+- Technical Support and Troubleshooting
+- Documentation and SOP Development
 
-Development
-- PHP (Learning)
+Web and Development
+- PHP, currently learning and building practical tools
 - Django
 - React
-- HTML, CSS
+- Next.js
+- HTML and CSS
+- Git and GitHub
+- cPanel deployment workflows
+- Website planning and SEO structure
 
-Professional
+Digital and Brand Growth
+- Digital Marketing Strategy
+- Social Media Content Planning
+- Hospitality Marketing
+- Brand Positioning
+- Poster and Campaign Concept Development
+- Website Copywriting
+- SEO Content Structuring
+- Portfolio and Service Page Development
+
+Professional Strengths
 - Leadership
-- System Thinking
+- Systems Thinking
 - Process Improvement
-- Training and Support
+- Team Training
+- Problem Solving
+- Business Communication
+- Operational Planning
+- Cross-department Coordination
 
-CURRENTLY LEARNING
-I am currently focused on backend development using PHP.
-The goal is simple: build real tools, improve my development workflow, and document the journey through practical projects.
+CURRENT LEARNING FOCUS
+I am currently strengthening my backend development skills using PHP, with a focus on building practical business tools, improving my development workflow, and documenting the learning journey through real projects.
+
+PORTFOLIO SERVICES
+- Business Systems and ERP Support
+- ICT Infrastructure Support
+- Website Design and Development
+- Digital Marketing and Brand Visibility
 
 CONTACT
 Email: ouma.cleo@gmail.com

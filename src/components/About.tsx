@@ -1,46 +1,77 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { BarChart3, Database, Shield, Users } from "lucide-react";
+import { BarChart3, GitBranch, Globe2, Network, ShieldCheck } from "lucide-react";
+import headshot from "@/assets/headshot.jpeg";
 
-const responsibilities = [
-  "Design ERP workflows for real business processes",
-  "Improve inventory tracking and reporting accuracy",
-  "Align ICT systems with finance and operations",
-  "Support teams through training and system adoption",
-  "Strengthen infrastructure and system reliability",
-];
-
-const principles = [
-  "Business first, system second",
-  "Fix workflows, not just tools",
-  "Measure impact, not activity",
-  "Keep systems simple and reliable",
-];
-
-const highlights = [
+const valueCards = [
   {
-    icon: Database,
-    title: "Structured digital workflows",
+    icon: GitBranch,
+    label: "Business Systems",
+    title: "Operations to system logic",
     description:
-      "I translate business operations into systems that support inventory control, reporting accuracy, and visibility.",
+      "I align inventory, production, sales, finance, and reporting systems so business activity is easier to trace, measure, and improve.",
+    points: [
+      "ERP workflow design for real operations",
+      "Inventory, POS, and reporting alignment",
+      "SOPs, documentation, and user adoption",
+    ],
   },
   {
     icon: BarChart3,
-    title: "Operational clarity",
+    label: "Digital Execution",
+    title: "Visibility beyond internal systems",
     description:
-      "My focus is not only on software configuration, but also on cleaner reporting and stronger decision support.",
+      "I also build and improve web, digital marketing, and brand visibility systems that help businesses present themselves professionally online.",
+    points: [
+      "Websites for hospitality and service brands",
+      "SEO-focused content and service pages",
+      "Digital campaigns, posters, and brand positioning",
+    ],
   },
   {
-    icon: Shield,
-    title: "Reliable systems",
+    icon: Network,
+    label: "ICT Infrastructure",
+    title: "Reliable technical operations",
     description:
-      "I improve infrastructure, access control, and process discipline so teams can work with confidence.",
+      "I strengthen the systems teams depend on every day, including networks, CCTV, backups, access control, monitoring, and user support.",
+    points: [
+      "Networks, CCTV, backups, and access control",
+      "Cybersecurity monitoring and user awareness",
+      "Troubleshooting, maintenance, and faster response",
+    ],
   },
   {
-    icon: Users,
-    title: "People and adoption",
+    icon: Globe2,
+    label: "Web & Brand Growth",
+    title: "Digital presence that supports business",
     description:
-      "Training, rollout support, and practical guidance matter as much as technical design.",
+      "I plan and build practical digital platforms, content structures, and marketing systems for hospitality, food brands, service businesses, and personal brands.",
+    points: [
+      "Modern websites and cPanel deployment workflows",
+      "SEO copy, service pages, and brand positioning",
+      "Digital marketing, campaigns, and poster concepts",
+    ],
+  },
+];
+
+const pillars = [
+  {
+    label: "Pillar 01",
+    title: "Business first, system second",
+    description:
+      "Technology should adapt to the business need. I focus on the why before deploying the how.",
+  },
+  {
+    label: "Pillar 02",
+    title: "Measure impact, not activity",
+    description:
+      "KPIs must reflect real efficiency gains, from reduced downtime to cleaner reports and better accuracy.",
+  },
+  {
+    label: "Pillar 03",
+    title: "People-centric implementation",
+    description:
+      "A powerful ERP is only useful when teams understand it, trust it, and can use it consistently.",
   },
 ];
 
@@ -49,133 +80,160 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="border-b border-white/5 py-24 lg:py-32">
       <div ref={ref} className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <div className="gold-line mb-4" />
-          <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">
-            About <span className="gold-gradient">Me</span>
-          </h2>
-          <p className="text-sm font-medium uppercase tracking-[0.28em] text-primary">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-primary">
             Who I Am
           </p>
+          <h2 className="max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            Where ICT, ERP, web, and business operations{" "}
+            <span className="gold-gradient italic">connect.</span>
+          </h2>
         </motion.div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-16 grid gap-6 lg:grid-cols-[1.18fr_0.82fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.05 }}
-            className="card-surface rounded-3xl p-7"
+            className="card-surface rounded-xl p-7 sm:p-10"
           >
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I am a Group ICT Manager and ERP Functional Consultant with
-              hands-on experience across hospitality, retail, and food
-              processing environments.
-            </p>
-            <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I specialize in translating business operations into structured
-              digital workflows, improving inventory control, reporting
-              accuracy, and operational visibility.
-            </p>
+            <h3 className="font-display text-3xl font-semibold">
+              Professional Narrative
+            </h3>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p>
+                I am a Group ICT Manager and ERP Functional Consultant with
+                hands-on experience across hospitality, food processing,
+                retail, and fast-food environments. My work sits at the point
+                where technology meets business execution.
+              </p>
+              <p>
+                I work across ICT infrastructure, ERP workflows, POS systems,
+                inventory control, web development, cybersecurity monitoring,
+                digital reporting, and brand visibility. My focus is simple:
+                build systems that help teams work better, reduce errors,
+                improve decision-making, and support business growth.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="border-l-4 border-primary bg-secondary/60 p-4">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
+                  Current Role
+                </p>
+                <p className="mt-2 text-lg font-semibold text-foreground">
+                  Group ICT Manager
+                </p>
+              </div>
+              <div className="border-l-4 border-white/30 bg-secondary/60 p-4">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                  Focus
+                </p>
+                <p className="mt-2 text-lg font-semibold text-foreground">
+                  ERP, ICT, Web, Digital
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.15 }}
-            className="card-surface rounded-3xl p-7"
+            className="group relative"
           >
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
-              Where I Add Value
-            </p>
-            <div className="mt-5 space-y-4">
-              <div>
-                <p className="font-display text-xl font-semibold text-foreground">
-                  Business process to system logic
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  I focus on getting workflows right so operations, reporting,
-                  and accountability stay aligned.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-primary/15 bg-primary/5 p-4">
-                <p className="text-sm leading-relaxed text-foreground">
-                  The goal is always the same: make systems practical,
-                  measurable, and dependable for the people using them every
-                  day.
-                </p>
+            <div className="portrait-frame card-surface overflow-hidden rounded-xl p-4">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-secondary">
+                <img
+                  src={headshot}
+                  alt="Cleophas Ouma professional portrait"
+                  className="portrait-reveal h-full w-full object-cover object-top"
+                />
+                <div className="card-surface absolute bottom-4 left-4 right-4 rounded-lg p-4">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
+                    Original Portrait
+                  </p>
+                  <p className="mt-1 text-xs italic text-muted-foreground">
+                    Reflecting technical leadership and strategic vision.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.55, delay: 0.2 }}
-            className="card-surface rounded-3xl p-7"
-          >
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
-              What I Actually Do
-            </p>
-            <div className="mt-5 space-y-4">
-              {responsibilities.map((item) => (
-                <div key={item} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.55, delay: 0.25 }}
-            className="card-surface rounded-3xl p-7"
-          >
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
-              How I Think
-            </p>
-            <div className="mt-5 space-y-4">
-              {principles.map((item) => (
-                <div key={item} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+        <div className="my-16 flex items-center gap-4">
+          <div className="h-px flex-1 bg-border" />
+          <p className="text-xs font-bold uppercase tracking-[0.26em] text-primary">
+            What I Do
+          </p>
+          <div className="h-px flex-1 bg-border" />
         </div>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {highlights.map((highlight, index) => (
+        <div className="grid gap-6 lg:grid-cols-2">
+          {valueCards.map((card, index) => (
             <motion.div
-              key={highlight.title}
-              initial={{ opacity: 0, y: 20 }}
+              key={card.title}
+              initial={{ opacity: 0, y: 22 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-surface rounded-3xl p-6"
+              transition={{ duration: 0.5, delay: 0.18 + index * 0.08 }}
+              className="card-surface rounded-xl p-7 sm:p-10"
             >
-              <highlight.icon className="mb-4 text-primary" size={24} />
-              <h3 className="font-display text-lg font-semibold">
-                {highlight.title}
+              <div className="mb-8 flex items-center justify-between gap-4">
+                <card.icon className="text-primary" size={32} />
+                <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+                  {card.label}
+                </span>
+              </div>
+              <h3 className="font-display text-2xl font-semibold sm:text-3xl">
+                {card.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {highlight.description}
+              <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+                {card.description}
               </p>
+              <div className="mt-8 space-y-3">
+                {card.points.map((point) => (
+                  <div key={point} className="flex items-center gap-3">
+                    <ShieldCheck className="text-primary" size={16} />
+                    <p className="text-sm text-foreground">{point}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <p className="mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            How I Think
+          </p>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {pillars.map((pillar, index) => (
+              <motion.div
+                key={pillar.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.45, delay: 0.3 + index * 0.08 }}
+                className="border-l-2 border-primary/35 p-6 transition-colors hover:border-primary"
+              >
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                  {pillar.label}
+                </p>
+                <h4 className="mt-4 text-lg font-bold text-primary">
+                  {pillar.title}
+                </h4>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {pillar.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -23,33 +23,32 @@ type CaseStudy = {
 const caseStudies: CaseStudy[] = [
   {
     company: "Bradegate Food Industries",
-    title: "ERP Central Store Implementation",
+    title: "ERP Central Store Workflow",
     context:
-      "Multiple production units and retail outlets were operating without a unified stock control flow, causing inconsistencies in inventory tracking and reporting.",
+      "Bradegate Food Industries needed a cleaner way to control finished goods from production to storage, distribution, and retail outlets.",
     problem: [
-      "Stock movements were not fully traceable",
-      "Reporting inconsistencies across units",
-      "Lack of centralized visibility",
-      "Operational delays in distribution",
+      "Finished goods needed a controlled movement path",
+      "Production, stores, distribution, and accounts needed better coordination",
+      "Stock receiving, issuing, returns, and reporting required clearer SOPs",
     ],
-    actionLabel: "What I Built",
+    actionLabel: "Key Contributions",
     actions: [
-      "Centralized ERP workflow for all finished goods",
-      "Structured movement: Production -> Central Store -> Distribution",
-      "Integrated warehouse, retail, and production inventory",
-      "SOPs for standardized stock handling",
+      "Helped define ERP inventory movement workflows",
+      "Supported central store control for finished goods",
+      "Improved coordination between production, stores, distribution, and accounts",
+      "Worked on SOP structures for stock receiving, issuing, returns, and reporting",
+      "Supported cleaner stock visibility and stronger accountability",
     ],
     comparison: [
-      { metric: "Stock visibility", before: "Fragmented", after: "Centralized across units" },
-      { metric: "Reporting accuracy", before: "Inconsistent", after: "Significantly improved" },
-      { metric: "Inventory tracking", before: "Partial", after: "End-to-end traceability" },
-      { metric: "Operational flow", before: "Disconnected", after: "Standardized workflow" },
+      { metric: "Stock movement", before: "Loosely controlled", after: "Structured path" },
+      { metric: "Store visibility", before: "Fragmented", after: "Cleaner accountability" },
+      { metric: "Reporting structure", before: "Inconsistent", after: "Improved" },
+      { metric: "Operational scale", before: "Harder to coordinate", after: "Stronger foundation" },
     ],
     result: [
-      "Full control over stock movement",
-      "Cleaner, reliable reports",
-      "Better coordination between departments",
-      "Strong foundation for scaling operations",
+      "Better control over stock movement",
+      "Improved reporting structure",
+      "Stronger foundation for scaling food production and distribution operations",
     ],
     visuals: [
       "ERP inventory dashboard",
@@ -61,28 +60,31 @@ const caseStudies: CaseStudy[] = [
   {
     company: "Bantu Africa Resort and Bradegate Pizza",
     title: "POS and Inventory Integration",
+    context:
+      "Sales and stock need to speak the same language. I worked on POS and inventory workflows that help connect daily sales activity with stock movement and reporting.",
     problem: [
-      "Sales data and inventory consumption were not fully aligned",
-      "Reconciliation was slower and less dependable",
-      "Stock accuracy suffered from reporting gaps",
+      "Daily sales activity needed clearer connection to stock movement",
+      "Sales, stock, and accounts required stronger reconciliation discipline",
+      "Staff needed practical system support and reporting routines",
     ],
-    actionLabel: "What I Did",
+    actionLabel: "Key Contributions",
     actions: [
-      "Linked POS transactions to inventory movement",
-      "Improved reporting workflows",
-      "Standardized daily sales reconciliation",
-      "Trained staff on system usage",
+      "Supported POS operations across hospitality and fast-food environments",
+      "Improved daily sales reconciliation workflows",
+      "Linked sales activity with inventory tracking",
+      "Trained staff on system use and reporting discipline",
+      "Helped reduce inconsistencies between sales, stock, and accounts",
     ],
     comparison: [
-      { metric: "Sales tracking", before: "Manual gaps", after: "Digitally aligned" },
-      { metric: "Stock reconciliation", before: "Inconsistent", after: "Improved accuracy" },
-      { metric: "Reporting speed", before: "Slower", after: "Faster daily reporting" },
-      { metric: "Staff system usage", before: "Limited", after: "Improved adoption" },
+      { metric: "Sales-to-stock alignment", before: "Disconnected", after: "Clearer connection" },
+      { metric: "Daily reconciliation", before: "Slower", after: "Improved workflow" },
+      { metric: "Reporting discipline", before: "Uneven", after: "Stronger routines" },
+      { metric: "Operational accountability", before: "Limited", after: "Improved" },
     ],
     result: [
-      "Clear link between sales and stock",
+      "Clearer sales-to-stock alignment",
       "Faster decision-making",
-      "Reduced reporting errors",
+      "Improved operational accountability",
     ],
     visuals: [
       "POS dashboard",
@@ -92,34 +94,72 @@ const caseStudies: CaseStudy[] = [
   },
   {
     company: "Bantu Africa Resort",
-    title: "ICT Infrastructure and System Optimization",
+    title: "ICT Infrastructure Optimization",
+    context:
+      "Bantu Africa Resort depends on stable systems for accommodation, restaurants, conferencing, security, guest services, and administration.",
     problem: [
-      "System inefficiencies",
-      "Weak security controls",
-      "Operational downtime",
+      "Daily resort operations needed stable ICT support",
+      "System access control and monitoring needed strengthening",
+      "Network, CCTV, and user support needed faster response",
     ],
-    actionLabel: "What I Did",
+    actionLabel: "Key Contributions",
     actions: [
-      "Strengthened security monitoring",
-      "Improved access control",
-      "Optimized infrastructure",
-      "Trained users",
+      "Managed ICT infrastructure and user support",
+      "Strengthened system access control and monitoring",
+      "Supported CCTV, network reliability, and troubleshooting",
+      "Improved user awareness on ICT security and system use",
+      "Helped reduce downtime through maintenance and faster response",
     ],
     comparison: [
-      { metric: "System downtime", before: "High", after: "Reduced by 15%" },
-      { metric: "Security posture", before: "Basic", after: "Improved by 30%" },
-      { metric: "Security incidents", before: "Frequent", after: "Reduced by 20%" },
-      { metric: "User access control", before: "Loose", after: "Structured for 100+ users" },
+      { metric: "ICT stability", before: "Reactive", after: "More dependable" },
+      { metric: "Access control", before: "Less structured", after: "Improved monitoring" },
+      { metric: "User awareness", before: "Limited", after: "Improved" },
+      { metric: "Support response", before: "Slower", after: "Faster maintenance cycle" },
     ],
     result: [
-      "More stable systems",
-      "Better security",
+      "More stable ICT operations",
       "Improved user accountability",
+      "Better support for daily resort operations",
     ],
     visuals: [
       "Network dashboard",
       "User access panel",
       "Monitoring interface",
+    ],
+  },
+  {
+    company: "Digital Presence and Service Brands",
+    title: "Website and Digital Presence Development",
+    context:
+      "Beyond internal systems, I build and support digital platforms that help brands present themselves professionally online.",
+    problem: [
+      "Service brands needed clearer website structure and presentation",
+      "Hospitality and service pages needed stronger SEO-focused content",
+      "Digital visibility needed practical systems for content and campaigns",
+    ],
+    actionLabel: "Key Contributions",
+    actions: [
+      "Planned website content structures for hospitality and service brands",
+      "Built portfolio workflows using GitHub, React/Next.js, and cPanel deployment",
+      "Structured SEO-focused service page content",
+      "Wrote website copy for Bantu Africa Resort, ARS, and other service organizations",
+      "Developed the chrisakhula brand around websites, branding, poster design, SEO, and digital marketing",
+    ],
+    comparison: [
+      { metric: "Brand presentation", before: "Less structured", after: "More professional" },
+      { metric: "Online visibility", before: "Limited", after: "Improved foundation" },
+      { metric: "Content structure", before: "Unclear", after: "SEO-focused sections" },
+      { metric: "Digital workflow", before: "Manual", after: "Practical publishing process" },
+    ],
+    result: [
+      "Better online visibility",
+      "Stronger brand presentation",
+      "Practical digital platforms that support marketing and customer engagement",
+    ],
+    visuals: [
+      "Hospitality website screen",
+      "Service page structure",
+      "Brand campaign concepts",
     ],
   },
 ];
@@ -129,7 +169,7 @@ const CaseStudies = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="case-studies" className="py-24">
+    <section id="case-studies" className="border-b border-white/5 py-24 lg:py-32">
       <div ref={ref} className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -137,8 +177,11 @@ const CaseStudies = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="gold-line mb-4" />
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
-            Featured <span className="gold-gradient">Case Studies</span>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            Strategic Implementations
+          </p>
+          <h2 className="font-display text-4xl font-bold sm:text-5xl">
+            Featured <span className="gold-gradient italic">Case Studies</span>
           </h2>
           <p className="mt-4 max-w-3xl text-muted-foreground">
             Enterprise improvements built around traceability, reporting
@@ -153,7 +196,7 @@ const CaseStudies = () => {
               initial={{ opacity: 0, y: 28 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, delay: index * 0.1 }}
-              className="card-surface rounded-[2rem] p-7 sm:p-8"
+              className="card-surface overflow-hidden rounded-xl p-7 sm:p-8"
             >
               <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                 <div>
@@ -219,7 +262,7 @@ const CaseStudies = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="overflow-hidden rounded-3xl border border-border bg-background/50">
+                  <div className="overflow-hidden rounded-xl border border-white/10 bg-background/50">
                     <table className="w-full text-left">
                       <thead className="border-b border-border bg-background/60">
                         <tr>
@@ -243,7 +286,7 @@ const CaseStudies = () => {
                             <td className="px-4 py-4 text-sm text-muted-foreground">
                               {row.before}
                             </td>
-                            <td className="px-4 py-4 text-sm text-muted-foreground">
+                            <td className="px-4 py-4 text-sm font-bold text-primary">
                               {row.after}
                             </td>
                           </tr>
@@ -270,13 +313,13 @@ const CaseStudies = () => {
 
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
-                      Visual Placeholders
+                      Visual Assets
                     </p>
                     <div className="mt-4 grid gap-3 sm:grid-cols-3">
                       {study.visuals.map((visual) => (
                         <div
                           key={visual}
-                          className="rounded-2xl border border-border bg-background/60 p-4"
+                            className="rounded-lg border border-white/10 bg-background/60 p-4"
                         >
                           <p className="text-[11px] uppercase tracking-[0.22em] text-primary">
                             Placeholder

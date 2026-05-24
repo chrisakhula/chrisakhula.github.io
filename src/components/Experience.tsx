@@ -1,32 +1,42 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { CheckCircle2 } from "lucide-react";
 
 const experiences = [
   {
     role: "Group ICT Manager",
-    company: "Bantu Africa Resort Ltd & Bradegate Food Industries",
+    company: "Bantu Africa Resort Ltd & Bradegate Food Industries Ltd",
     period: "Jan 2025 - Present",
+    emphasis: true,
     achievements: [
-      "Lead ERP and ICT operations across multiple units",
-      "Align systems with finance, inventory, and reporting",
-      "Drive operational efficiency through digital workflows",
+      "Lead ICT and ERP operations across hospitality, food processing, retail, and fast-food units.",
+      "Align systems with finance, inventory, sales, production, and reporting needs.",
+      "Support ERP workflows, POS systems, ICT infrastructure, and digital reporting.",
+      "Improve operational efficiency through structured systems and process documentation.",
+      "Coordinate ICT support, system adoption, access control, and user training.",
     ],
   },
   {
     role: "ICT Officer",
     company: "Bantu Africa Resort Ltd",
+    period: "Previous Role",
+    emphasis: false,
     achievements: [
-      "Managed ICT infrastructure and systems",
-      "Improved security and operational workflows",
-      "Supported POS and reporting systems",
+      "Managed ICT infrastructure, systems, users, and support requests.",
+      "Supported POS, reporting, network, and security systems.",
+      "Improved access control, monitoring, and ICT service reliability.",
+      "Assisted teams in using systems more effectively.",
     ],
   },
   {
     role: "ICT Intern",
-    company: "State Department of Trade (KIBT)",
+    company: "State Department of Trade, KIBT",
+    period: "Internship",
+    emphasis: false,
     achievements: [
-      "Supported network and system maintenance",
-      "Assisted in security testing and monitoring",
+      "Supported system maintenance and network operations.",
+      "Assisted in security testing and monitoring.",
+      "Contributed to improved system stability and operational support.",
     ],
   },
 ];
@@ -36,61 +46,79 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="border-b border-white/5 py-24 lg:py-32">
       <div ref={ref} className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
+          className="max-w-3xl"
         >
-          <div className="gold-line mb-4" />
-          <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">
-            Work <span className="gold-gradient">Experience</span>
+          <h2 className="font-display text-4xl font-bold sm:text-5xl">
+            Experience <span className="gold-gradient italic">& Expertise</span>
           </h2>
-          <p className="max-w-2xl text-muted-foreground">
-            Roles that built my approach to ERP operations, ICT support, and
-            practical systems leadership.
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            A track record of driving operational efficiency through ERP
+            integration, strategic ICT leadership, and robust system
+            architecture.
           </p>
         </motion.div>
 
-        <div className="relative mt-12">
-          <div className="absolute bottom-0 left-4 top-0 w-px bg-border md:left-8" />
+        <div className="mt-20 grid gap-12 lg:grid-cols-[0.32fr_0.68fr]">
+          <div>
+            <h3 className="font-display text-3xl font-semibold">
+              Work <span className="text-primary italic">Experience</span>
+            </h3>
+          </div>
 
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={exp.role}
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative pl-12 md:pl-20"
-              >
-                <div className="absolute left-2.5 top-2 h-3 w-3 rounded-full border-2 border-background bg-primary md:left-6.5" />
-
-                <div className="card-surface rounded-3xl p-6">
-                  <div className="mb-1 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                    <h3 className="font-display text-lg font-semibold">{exp.role}</h3>
-                    {exp.period ? (
-                      <span className="text-xs font-medium text-primary">
+          <div className="relative pl-8">
+            <div className="absolute bottom-0 left-1 top-2 w-px bg-gradient-to-b from-primary to-transparent" />
+            <div className="space-y-14">
+              {experiences.map((exp, index) => (
+                <motion.article
+                  key={exp.role}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.12 }}
+                  className="relative"
+                >
+                  <div
+                    className={`absolute -left-[34px] top-2 h-3 w-3 rounded-full border-4 border-background ${
+                      exp.emphasis ? "bg-primary" : "bg-muted-foreground"
+                    }`}
+                  />
+                  <div className="card-surface rounded-xl p-6 sm:p-8">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h4 className="text-xl font-bold text-foreground">
+                          {exp.role}
+                        </h4>
+                        <p className="mt-1 font-medium text-primary">
+                          {exp.company}
+                        </p>
+                      </div>
+                      <span className="w-fit rounded-full bg-secondary px-4 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
                         {exp.period}
                       </span>
-                    ) : null}
+                    </div>
+
+                    <div className="mt-6 space-y-4">
+                      {exp.achievements.map((achievement) => (
+                        <div key={achievement} className="flex gap-3">
+                          <CheckCircle2
+                            className={exp.emphasis ? "text-primary" : "text-muted-foreground"}
+                            size={17}
+                          />
+                          <p className="text-sm leading-relaxed text-muted-foreground">
+                            {achievement}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <p className="mb-4 text-sm text-muted-foreground">{exp.company}</p>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement) => (
-                      <li
-                        key={achievement}
-                        className="flex gap-2 text-sm text-muted-foreground"
-                      >
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </div>

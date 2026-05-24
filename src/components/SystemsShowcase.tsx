@@ -22,6 +22,10 @@ const workflows = [
     title: "ERP Logic",
     steps: ["Input", "Validation", "Processing", "Reporting", "Decision"],
   },
+  {
+    title: "Digital Visibility",
+    steps: ["Planning", "Content", "Publishing", "SEO", "Engagement"],
+  },
 ];
 
 const dashboards = [
@@ -31,6 +35,8 @@ const dashboards = [
   { title: "Sales performance", icon: BarChart3 },
   { title: "Incident tracking", icon: Shield },
   { title: "Access control", icon: Lock },
+  { title: "KRA TIMS/eTIMS reporting readiness", icon: BarChart3 },
+  { title: "Website and campaign visibility", icon: Monitor },
 ];
 
 const SystemsShowcase = () => {
@@ -38,7 +44,7 @@ const SystemsShowcase = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="systems" className="py-24">
+    <section id="systems" className="border-b border-white/5 py-24 lg:py-32">
       <div ref={ref} className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,11 +52,12 @@ const SystemsShowcase = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="gold-line mb-4" />
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
-            Dashboards <span className="gold-gradient">& Workflows</span>
+          <h2 className="font-display text-4xl font-bold sm:text-5xl">
+            Dashboards <span className="gold-gradient italic">& Workflows</span>
           </h2>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            I focus on how systems actually work, not just how they look.
+            I focus on how systems actually work, from support and access
+            control to ERP reporting, sales accuracy, and digital visibility.
           </p>
         </motion.div>
 
@@ -94,7 +101,7 @@ const SystemsShowcase = () => {
           <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary">
             Dashboard Concepts
           </p>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {dashboards.map((dashboard) => (
               <div
                 key={dashboard.title}

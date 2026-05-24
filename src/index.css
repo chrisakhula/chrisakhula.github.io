@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
-    --foreground: 40 20% 92%;
+    --background: 225 16% 7%;
+    --foreground: 260 9% 90%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 40 20% 92%;
+    --card: 225 10% 12%;
+    --card-foreground: 260 9% 90%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 225 10% 12%;
+    --popover-foreground: 260 9% 90%;
 
-    --primary: 42 78% 55%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 45 87% 63%;
+    --primary-foreground: 45 100% 12%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 40 20% 85%;
+    --secondary: 225 8% 16%;
+    --secondary-foreground: 36 19% 75%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 225 8% 16%;
+    --muted-foreground: 36 19% 75%;
 
     --accent: 42 78% 55%;
     --accent-foreground: 220 20% 7%;
@@ -30,17 +30,17 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 42 78% 55%;
+    --border: 43 18% 25%;
+    --input: 225 8% 16%;
+    --ring: 45 87% 63%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --gold: 42 78% 55%;
-    --gold-light: 42 70% 70%;
-    --gold-dark: 42 80% 40%;
-    --surface: 220 18% 12%;
-    --surface-hover: 220 18% 16%;
+    --gold: 45 87% 63%;
+    --gold-light: 46 100% 77%;
+    --gold-dark: 43 63% 52%;
+    --surface: 225 10% 12%;
+    --surface-hover: 225 9% 18%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -66,9 +66,8 @@
     font-family: var(--font-body);
     line-height: 1.6;
     background-image:
-      radial-gradient(circle at top left, hsl(var(--gold) / 0.12), transparent 32%),
-      radial-gradient(circle at top right, rgba(58, 110, 168, 0.16), transparent 26%),
-      linear-gradient(180deg, hsl(220 20% 8%) 0%, hsl(220 20% 7%) 48%, hsl(220 20% 6%) 100%);
+      linear-gradient(180deg, hsl(225 16% 8%) 0%, hsl(225 16% 7%) 45%, hsl(225 18% 5%) 100%),
+      linear-gradient(90deg, hsl(var(--gold) / 0.035), transparent 30%, hsl(210 25% 24% / 0.08));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -87,11 +86,11 @@
 
 @layer components {
   .section-container {
-    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-10;
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
+    background: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 52%, hsl(var(--gold-dark)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -103,13 +102,41 @@
   }
 
   .card-surface {
-    @apply rounded-lg border border-border transition-all duration-300;
-    background: linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(220 18% 11%) 100%);
-    box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.75);
+    @apply rounded-lg border transition-all duration-300;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.022) 100%);
+    border-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 24px 50px -38px rgba(0, 0, 0, 0.9);
   }
 
   .card-surface:hover {
-    background: linear-gradient(180deg, hsl(var(--surface-hover)) 0%, hsl(220 18% 13%) 100%);
-    box-shadow: 0 22px 52px -28px rgba(0, 0, 0, 0.85);
+    border-color: hsl(var(--gold) / 0.28);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.065) 0%, rgba(255, 255, 255, 0.032) 100%);
+    box-shadow: 0 28px 62px -40px rgba(0, 0, 0, 0.95);
+    transform: translateY(-2px);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 0 rgba(242, 202, 80, 0);
+  }
+
+  .gold-glow:hover {
+    box-shadow: 0 0 22px rgba(242, 202, 80, 0.28);
+  }
+
+  .portrait-frame {
+    border-color: hsl(var(--gold) / 0.28);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 24px 70px -48px rgba(242, 202, 80, 0.55);
+  }
+
+  .portrait-reveal {
+    filter: grayscale(1) contrast(1.08) brightness(0.9);
+    transition: filter 700ms ease, transform 700ms ease;
+  }
+
+  .group:hover .portrait-reveal,
+  .portrait-reveal:hover {
+    filter: grayscale(0) contrast(1.02) brightness(1) saturate(1.12);
+    transform: scale(1.025);
   }
 }

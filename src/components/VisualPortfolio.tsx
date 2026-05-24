@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ExternalLink } from "lucide-react";
 import cleodev from "@/assets/cleodev.png";
-import portraitArt from "@/assets/dev-cleophas01.jpg";
 
 type VisualItem = {
   title: string;
@@ -10,16 +10,30 @@ type VisualItem = {
   tag: string;
   kind?: "erp-dashboard" | "pos-analytics" | "inventory-panel" | "web-app";
   image?: string;
+  liveUrl?: string;
+  displayUrl?: string;
 };
 
 const visualItems: VisualItem[] = [
   {
-    title: "Original Portrait Treatment",
+    title: "Bantu Africa Resort Website",
     description:
-      "The illustrated portrait from the first portfolio now lives on as a creative signature asset.",
-    className: "",
-    tag: "Preserved",
-    image: portraitArt,
+      "A live hospitality website preview for Bantu Africa Resort, connected to the public site and presented as a portfolio web build.",
+    className: "lg:col-span-2",
+    tag: "Live Website",
+    kind: "web-app",
+    liveUrl: "https://www.bantuafrica.co.ke/",
+    displayUrl: "www.bantuafrica.co.ke",
+  },
+  {
+    title: "ARS Website",
+    description:
+      "A live website preview for ARS, generated from the public site so the card can reflect future updates.",
+    className: "lg:col-span-2",
+    tag: "Live Website",
+    kind: "web-app",
+    liveUrl: "https://ars.co.ke/",
+    displayUrl: "ars.co.ke",
   },
   {
     title: "Cleodev Brand Mark",
@@ -58,14 +72,6 @@ const visualItems: VisualItem[] = [
     description: "Placeholder for ERP and ICT process maps.",
     className: "",
     tag: "Placeholder",
-  },
-  {
-    title: "Web App Screens",
-    description:
-      "A responsive hospitality landing page inspired by your Bantu Africa Resort web build, with strong branding, hero messaging, and booking calls to action.",
-    className: "lg:col-span-2",
-    tag: "Live Build",
-    kind: "web-app",
   },
 ];
 
@@ -298,75 +304,45 @@ const VisualPortfolio = () => {
     }
 
     if (item.kind === "web-app") {
-      const links = ["Home", "Rooms", "Dining", "Experiences", "Menu", "Contact"];
+      const liveUrl = item.liveUrl ?? "https://www.bantuafrica.co.ke/";
+      const displayUrl = item.displayUrl ?? new URL(liveUrl).hostname;
+      const previewUrl = `https://s.wordpress.com/mshots/v1/${encodeURIComponent(
+        liveUrl,
+      )}?w=1400`;
 
       return (
         <div className="mt-6 rounded-[1.5rem] border border-border bg-background/60 p-3">
           <div className="overflow-hidden rounded-[1.15rem] border border-primary/15 bg-[#162537] shadow-inner shadow-black/10">
-            <div className="relative min-h-[320px] overflow-hidden">
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,16,27,0.2),rgba(8,16,27,0.68)),radial-gradient(circle_at_top_left,rgba(255,194,52,0.18),transparent_22%),linear-gradient(135deg,#27435c_0%,#31435d_24%,#8a5f38_54%,#34502f_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(8,16,27,0.45)_35%,rgba(12,28,16,0.82))]" />
-              <div className="absolute left-[8%] top-[12%] h-[48%] w-[18%] rounded-t-[2rem] rounded-b-lg bg-[#a97a41]/65 shadow-2xl shadow-black/25" />
-              <div className="absolute left-[24%] top-[7%] h-[52%] w-[18%] rounded-t-[2.5rem] rounded-b-lg bg-[#c8a25f]/55 shadow-2xl shadow-black/25" />
-              <div className="absolute left-[38%] top-[14%] h-[43%] w-[16%] rounded-t-[1.5rem] rounded-b-lg bg-[#6d2f28]/70 shadow-2xl shadow-black/25" />
-              <div className="absolute right-[12%] top-[24%] h-[36%] w-[23%] rounded-t-[1.5rem] rounded-b-lg bg-[#48261f]/70 shadow-2xl shadow-black/25" />
-              <div className="absolute bottom-[12%] left-[6%] h-16 w-16 rounded-full bg-[#75c3da]/55 blur-sm" />
-              <div className="absolute bottom-[14%] left-[2%] right-[2%] h-[15%] rounded-[2rem] bg-[#132718]/55" />
-
-              <div className="relative z-10 p-4 sm:p-5">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#f2b919] bg-[#203752]/85 text-xs font-semibold uppercase tracking-[0.18em] text-[#f2b919]">
-                      BA
-                    </div>
-                    <div>
-                      <p className="font-display text-lg font-semibold text-[#f2b919]">
-                        Bantu
-                      </p>
-                      <p className="text-[10px] uppercase tracking-[0.22em] text-[#f2b919]/80">
-                        Africa Resort
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="hidden items-center gap-4 lg:flex">
-                    {links.map((link) => (
-                      <span
-                        key={link}
-                        className={`text-xs font-medium ${
-                          link === "Home" ? "text-[#f2b919]" : "text-white/85"
-                        }`}
-                      >
-                        {link}
-                      </span>
-                    ))}
-                    <span className="rounded-xl bg-[#f2b919] px-3 py-2 text-xs font-semibold text-[#162537]">
-                      Book Now
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mx-auto mt-14 max-w-2xl text-center sm:mt-16">
-                  <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-[#f2b919]">
-                    Nyeri County, Kenya
-                  </p>
-                  <h3 className="mt-4 font-display text-3xl font-semibold leading-none text-white sm:text-5xl">
-                    Welcome to Bantu Africa Resort
-                  </h3>
-                  <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#f4d48f] sm:text-base">
-                    A hospitality landing page that balances resort branding,
-                    clear navigation, and direct booking action.
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-                    <span className="rounded-xl bg-[#f2b919] px-4 py-2 text-sm font-semibold text-[#162537]">
-                      Book Your Stay
-                    </span>
-                    <span className="rounded-xl border border-[#f2b919] px-4 py-2 text-sm font-semibold text-[#f2b919]">
-                      Explore the Resort
-                    </span>
-                  </div>
-                </div>
+            <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-[#0f1724] px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ff6159]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
               </div>
+              <div className="min-w-0 flex-1 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-center text-[11px] text-white/75">
+                {displayUrl}
+              </div>
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${item.title} live website`}
+                className="text-primary transition-colors hover:text-[#ffe28a]"
+              >
+                <ExternalLink size={16} />
+              </a>
+            </div>
+            <div className="relative h-[340px] overflow-hidden bg-white sm:h-[420px]">
+              <img
+                src={previewUrl}
+                alt={`Live preview of ${item.title}`}
+                loading="lazy"
+                className="h-full w-full object-cover object-top"
+              />
+              <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+                Live Snapshot
+              </span>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#162537] to-transparent" />
             </div>
           </div>
         </div>
