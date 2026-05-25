@@ -51,22 +51,22 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid border-y border-border/70 lg:grid-cols-2">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-surface group rounded-xl p-6"
+              className="group border-b border-border/70 py-8 pr-0 last:border-b-0 md:px-6 lg:border-r lg:even:border-r-0 lg:last:border-b-0"
             >
-              <div className="inline-flex rounded-lg border border-primary/20 bg-primary/10 p-3 text-primary">
+              <div className="inline-flex rounded-sm border border-primary/20 bg-primary/10 p-3 text-primary transition-colors duration-200 group-hover:bg-primary group-hover:text-primary-foreground">
                 <service.icon size={22} />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold transition-colors group-hover:text-primary">
+              <h3 className="mt-5 max-w-md font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-primary">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
                 {service.description}
               </p>
             </motion.div>

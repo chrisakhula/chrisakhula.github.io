@@ -53,9 +53,9 @@ const caseStudies: CaseStudy[] = [
     visuals: [
       "ERP inventory dashboard",
       "Stock movement tracking screen",
-      "Central store workflow diagram",
+      "Central store workflow map",
     ],
-    workflow: "Production -> Central Store -> Distribution -> Retail -> Reporting",
+    workflow: "Production / Central Store / Distribution / Retail / Reporting",
   },
   {
     company: "Bantu Africa Resort and Bradegate Pizza",
@@ -208,7 +208,7 @@ const CaseStudies = () => {
                   </h3>
                 </div>
                 {study.workflow ? (
-                  <div className="rounded-2xl border border-primary/15 bg-primary/5 px-4 py-3 text-sm text-muted-foreground">
+                  <div className="rounded-sm border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-muted-foreground">
                     <span className="font-medium text-foreground">Workflow:</span>{" "}
                     {study.workflow}
                   </div>
@@ -319,10 +319,10 @@ const CaseStudies = () => {
                       {study.visuals.map((visual) => (
                         <div
                           key={visual}
-                            className="rounded-lg border border-white/10 bg-background/60 p-4"
+                          className="surface-line rounded-sm border p-4"
                         >
                           <p className="text-[11px] uppercase tracking-[0.22em] text-primary">
-                            Placeholder
+                            Planned view
                           </p>
                           <p className="mt-6 text-sm font-medium text-foreground">
                             {visual}

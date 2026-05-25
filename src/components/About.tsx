@@ -123,7 +123,7 @@ const About = () => {
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="border-l-4 border-primary bg-secondary/60 p-4">
+              <div className="surface-line border-y p-4">
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary">
                   Current Role
                 </p>
@@ -131,7 +131,7 @@ const About = () => {
                   Group ICT Manager
                 </p>
               </div>
-              <div className="border-l-4 border-white/30 bg-secondary/60 p-4">
+              <div className="border-y border-border/70 p-4">
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   Focus
                 </p>
@@ -157,10 +157,11 @@ const About = () => {
                 />
                 <div className="card-surface absolute bottom-4 left-4 right-4 rounded-lg p-4">
                   <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-foreground">
-                    Original Portrait
+                    Systems in the Room
                   </p>
                   <p className="mt-1 text-xs italic text-muted-foreground">
-                    Reflecting technical leadership and strategic vision.
+                    Technical leadership shaped by real teams, counters,
+                    stores, reports, and decisions.
                   </p>
                 </div>
               </div>
@@ -176,14 +177,16 @@ const About = () => {
           <div className="h-px flex-1 bg-border" />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
           {valueCards.map((card, index) => (
             <motion.div
               key={card.title}
               initial={{ opacity: 0, y: 22 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.18 + index * 0.08 }}
-              className="card-surface rounded-xl p-7 sm:p-10"
+              className={`card-surface rounded-xl p-7 sm:p-10 ${
+                index === 0 ? "lg:row-span-2 lg:min-h-[28rem]" : ""
+              }`}
             >
               <div className="mb-8 flex items-center justify-between gap-4">
                 <card.icon className="text-primary" size={32} />
@@ -191,7 +194,7 @@ const About = () => {
                   {card.label}
                 </span>
               </div>
-              <h3 className="font-display text-2xl font-semibold sm:text-3xl">
+              <h3 className="font-display text-2xl font-semibold leading-tight sm:text-3xl">
                 {card.title}
               </h3>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">
@@ -200,7 +203,7 @@ const About = () => {
               <div className="mt-8 space-y-3">
                 {card.points.map((point) => (
                   <div key={point} className="flex items-center gap-3">
-                    <ShieldCheck className="text-primary" size={16} />
+                    <ShieldCheck className="shrink-0 text-primary" size={16} />
                     <p className="text-sm text-foreground">{point}</p>
                   </div>
                 ))}

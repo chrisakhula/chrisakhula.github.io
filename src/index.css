@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..800,80,1&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 225 16% 7%;
-    --foreground: 260 9% 90%;
+    --background: 218 23% 7%;
+    --foreground: 46 30% 92%;
 
-    --card: 225 10% 12%;
-    --card-foreground: 260 9% 90%;
+    --card: 218 18% 10%;
+    --card-foreground: 46 30% 92%;
 
-    --popover: 225 10% 12%;
-    --popover-foreground: 260 9% 90%;
+    --popover: 218 18% 10%;
+    --popover-foreground: 46 30% 92%;
 
-    --primary: 45 87% 63%;
-    --primary-foreground: 45 100% 12%;
+    --primary: 43 83% 62%;
+    --primary-foreground: 218 30% 8%;
 
-    --secondary: 225 8% 16%;
-    --secondary-foreground: 36 19% 75%;
+    --secondary: 218 14% 15%;
+    --secondary-foreground: 42 24% 74%;
 
-    --muted: 225 8% 16%;
-    --muted-foreground: 36 19% 75%;
+    --muted: 218 14% 15%;
+    --muted-foreground: 42 18% 70%;
 
     --accent: 42 78% 55%;
     --accent-foreground: 220 20% 7%;
@@ -30,8 +30,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 43 18% 25%;
-    --input: 225 8% 16%;
+    --border: 42 16% 24%;
+    --input: 218 14% 15%;
     --ring: 45 87% 63%;
 
     --radius: 0.5rem;
@@ -39,11 +39,11 @@
     --gold: 45 87% 63%;
     --gold-light: 46 100% 77%;
     --gold-dark: 43 63% 52%;
-    --surface: 225 10% 12%;
-    --surface-hover: 225 9% 18%;
+    --surface: 218 18% 10%;
+    --surface-hover: 218 16% 15%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
     --sidebar-background: 220 20% 7%;
     --sidebar-foreground: 40 20% 92%;
@@ -66,8 +66,9 @@
     font-family: var(--font-body);
     line-height: 1.6;
     background-image:
-      linear-gradient(180deg, hsl(225 16% 8%) 0%, hsl(225 16% 7%) 45%, hsl(225 18% 5%) 100%),
-      linear-gradient(90deg, hsl(var(--gold) / 0.035), transparent 30%, hsl(210 25% 24% / 0.08));
+      radial-gradient(circle at 12% 8%, hsl(43 83% 62% / 0.12), transparent 24rem),
+      linear-gradient(135deg, hsl(218 23% 8%) 0%, hsl(218 24% 6%) 52%, hsl(205 30% 8%) 100%);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -76,6 +77,11 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {
@@ -90,10 +96,7 @@
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 52%, hsl(var(--gold-dark)) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: hsl(var(--primary));
   }
 
   .gold-line {
@@ -102,18 +105,40 @@
   }
 
   .card-surface {
-    @apply rounded-lg border transition-all duration-300;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.022) 100%);
-    border-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 24px 50px -38px rgba(0, 0, 0, 0.9);
+    @apply rounded-lg border;
+    background: linear-gradient(180deg, hsl(218 18% 12% / 0.86) 0%, hsl(218 18% 9% / 0.9) 100%);
+    border-color: hsl(42 18% 32% / 0.36);
+    box-shadow: 0 24px 60px -42px hsl(218 35% 2% / 0.95);
+    transition:
+      transform 180ms cubic-bezier(0.23, 1, 0.32, 1),
+      border-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+      box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .card-surface:hover {
-    border-color: hsl(var(--gold) / 0.28);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.065) 0%, rgba(255, 255, 255, 0.032) 100%);
-    box-shadow: 0 28px 62px -40px rgba(0, 0, 0, 0.95);
+    border-color: hsl(var(--gold) / 0.4);
+    box-shadow: 0 30px 70px -46px hsl(43 83% 35% / 0.42);
     transform: translateY(-2px);
+  }
+
+  .surface-line {
+    border-color: hsl(var(--border) / 0.6);
+    background:
+      linear-gradient(90deg, hsl(var(--primary) / 0.1), transparent 34%),
+      hsl(var(--background) / 0.42);
+  }
+
+  .interactive-press {
+    transition:
+      transform 140ms cubic-bezier(0.23, 1, 0.32, 1),
+      border-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      color 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .interactive-press:active {
+    transform: scale(0.98);
   }
 
   .gold-glow {
@@ -131,12 +156,17 @@
 
   .portrait-reveal {
     filter: grayscale(1) contrast(1.08) brightness(0.9);
-    transition: filter 700ms ease, transform 700ms ease;
+    transform: none;
   }
 
-  .group:hover .portrait-reveal,
-  .portrait-reveal:hover {
-    filter: grayscale(0) contrast(1.02) brightness(1) saturate(1.12);
-    transform: scale(1.025);
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

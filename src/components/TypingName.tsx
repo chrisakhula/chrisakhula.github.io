@@ -10,6 +10,10 @@ type TypingNameProps = {
 const fullName = "Cleophas Ouma";
 const firstName = "Cleophas";
 
+const prefersReducedMotion = () =>
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 const TypingName = ({
   className = "",
   firstNameClassName = "",
@@ -20,9 +24,22 @@ const TypingName = ({
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      setVisibleCharacters(fullName.length);
+      return;
+    }
+
     const isComplete = visibleCharacters === fullName.length;
     const isEmpty = visibleCharacters === 0;
-    const delay = isComplete ? 1500 : isEmpty && isDeleting ? 450 : isDeleting ? 55 : 95;
+    const delay = isComplete
+      ? 2600
+      : isEmpty && isDeleting
+        ? 680
+        : isDeleting
+          ? 42
+          : visibleCharacters === 0
+            ? 280
+            : 74;
 
     const timeout = window.setTimeout(() => {
       if (isComplete && !isDeleting) {
@@ -35,7 +52,9 @@ const TypingName = ({
         return;
       }
 
-      setVisibleCharacters((current) => current + (isDeleting ? -1 : 1));
+      setVisibleCharacters((current) =>
+        Math.min(Math.max(current + (isDeleting ? -1 : 1), 0), fullName.length),
+      );
     }, delay);
 
     return () => window.clearTimeout(timeout);
@@ -47,15 +66,21 @@ const TypingName = ({
   const hasTypedLastName = visibleCharacters > firstName.length + 1;
 
   return (
-    <span className={`inline-block whitespace-nowrap ${className}`} aria-label={fullName}>
-      <span className={firstNameClassName}>{typedFirstName}</span>
-      {(hasTypedLastName || visibleCharacters > firstName.length) && " "}
-      <span className={lastNameClassName}>{typedLastName}</span>
-      <span
-        aria-hidden="true"
-        className={`ml-1 inline-block animate-pulse text-primary ${cursorClassName}`}
-      >
-        |
+    <span className={`inline-grid whitespace-nowrap align-baseline ${className}`} aria-label={fullName}>
+      <span className="col-start-1 row-start-1" aria-hidden="true">
+        <span className={firstNameClassName}>{typedFirstName}</span>
+        {(hasTypedLastName || visibleCharacters > firstName.length) && " "}
+        <span className={lastNameClassName}>{typedLastName}</span>
+        <span
+          className={`ml-1 inline-block animate-pulse text-primary ${cursorClassName}`}
+        >
+          |
+        </span>
+      </span>
+      <span className="invisible col-start-1 row-start-1" aria-hidden="true">
+        <span className={firstNameClassName}>{firstName}</span>{" "}
+        <span className={lastNameClassName}>Ouma</span>
+        <span className={`ml-1 inline-block ${cursorClassName}`}>|</span>
       </span>
     </span>
   );
